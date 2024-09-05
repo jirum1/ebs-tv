@@ -758,9 +758,6 @@ footer{
         color: var(--withe);
         text-wrap: pretty;
     }
-   & h1{
-        line-height: 50px;
-    }
 }
 .days{
     margin-top: 0;
