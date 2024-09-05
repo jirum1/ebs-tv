@@ -759,7 +759,7 @@ footer{
         text-wrap: pretty;
     }
    & h1{
-        line-height: 4px;
+        line-height: 45px;
     }
 }
 .days{
