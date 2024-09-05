@@ -258,7 +258,7 @@ header{
                 display: flex;
                 flex-direction: column;
                 gap: 0.1rem;
-                padding-left: 1rem;
+                padding-left: 0.7rem;
                & h2{
                     font-size: var(--aa);
                 }
@@ -684,9 +684,9 @@ footer{
 }
 @media (max-width: 500px) {
     :root{
-        --h1font:3.6rem;
+        --h1font:3.4rem;
         --largerfont:1rem;
-        --aa:0.85rem;
+        --aa:0.82rem;
     }
 .hero{
     grid-template-columns: 100%;
@@ -729,8 +729,9 @@ footer{
   margin: 0.5rem 0;
     }
    & h1,p{
-        width: 90%;
+        width: 100%;
         color: var(--withe);
+        text-wrap: pretty;
     }
 }
 section{
@@ -752,6 +753,9 @@ section{
    & .latestnew{
         grid-template-columns:100%;
     }
+    & h1{
+        text-wrap: balance;
+    }
 }
 .trendingnow{
    & .contant{
@@ -769,6 +773,8 @@ section{
    & p,a{
         font-size: xx-small;
     }
-    
+    & a{
+    color: var(--withe);
+    }
 }
 }
