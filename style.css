@@ -24,7 +24,7 @@
 body{
     background-color: var(--background);
     overflow-x: hidden;
-    width: 100vw;
+    max-width: 100vw;
 }
 p{
     font-size: 0.9rem;
@@ -50,9 +50,10 @@ p{
     margin-top: auto;
    & .relas{
       display: flex;
-   & p{
+      & p{
         text-transform: capitalize !important;
         opacity: 1 !important;
+
     }
 }
     
@@ -623,7 +624,7 @@ footer{
         }
 }
 .copyright{
-    opacity: 0.5;
+    opacity: 0.7;
     padding: 0.5rem;
   display: flex;
   justify-content: space-around;
@@ -641,16 +642,36 @@ footer{
     padding: 0.3rem 1rem;
     padding-bottom: 0;
     height: max-content;
+   
+    & .darkmood{
+        position: relative;
+        align-self: center;
+        & svg{
+            width:2rem;
+        }
+    & .sun{
+        position: absolute;
+        top: 0%;
+        z-index: -1;
+        width: 0;
+    }
+    }
    & img{
         margin: auto;
         width: 3rem;
     }
     & .logo1{
-        width: 50px;
+        overflow: hidden;
+        height: 100%;
         position: absolute;
         top: 25%;
-        left: 50%;
+        left: 0%;
         rotate: y 90deg;
+        
+     & svg{
+        width: 2rem;
+        align-self: center;
+     }
     }
    & .logo2{
         display: flex;
@@ -662,29 +683,54 @@ footer{
             font-size: var(--largerfont);
         }
        & svg{
-            width: 50px;
+            width: 1.5rem;
             fill: var(--withe);
         }
     }
    & input{
         display: none;
     }
+    & input[type="search"]{
+        display: block;
+    }
    & .manu{
         transform-style: preserve-3d;
         position: relative;
         & .links{
+            width: 70vw;
+            height: 100vh;
         transition: all 1s;
-        scale:  0 ;
         position: absolute;
-        left: -300%;
-        top: 80%;
+        left: -2000%;
+        top: -10%;
         gap: 0;
-       & a{
-            background-color: var(--coloreof30);
+        z-index: 1;
+        background-color: black;
+        padding: 5rem 0;
+        & .sesarc{
+            padding: 0.5rem;
+            background-color: rgba(254, 252, 252, 0.768);
+          &  input{
+                opacity: 0.8;
+                padding: 0.8rem 4rem;
+                padding-left: 0.4rem;
+                border: none;
+                border-radius: 7px;
+                background-color: black;
+                color: white;
+                width: 100%;
+            } 
+        }
+               & a{
             display: inline-block;
             text-transform: capitalize;
-            color: var(--withe);
-            padding: 1rem 4rem;
+            margin-top: 0.5rem;
+            color: white;
+            padding: 0.8rem ;
+            text-align: left;
+            border: 4px solid rgba(255, 255, 255, 0.211);
+            border-left: 10px solid white ;
+   
         }
       }
     }
@@ -694,6 +740,18 @@ footer{
         --h1font:3.4rem;
         --largerfont:1rem;
         --aa:0.82rem;
+    }
+    :root:has([value="darkmood"]:checked) {
+        --background:var(--withe);
+        --withe:var(--background);
+        --black:var(--background);
+        --background1:hsl(0,0%,96%);
+        --background3:hsl(0,0%,96%);
+        --bordercolor:hsl(0,0%,96%);
+        --coloreof30:hsl(0,0%,40%);
+        --coloreof301:hsl(0,0%,20%);
+        --color10:hsl(0,0%,85%);
+
     }
 .hero{
     grid-template-columns: 100%;
@@ -705,9 +763,9 @@ footer{
     display: flex;
     margin-bottom: 1.2rem;
   &  input:checked + label>.links{
-      scale: 1 ;
-     }
-    & input:checked + label>.logo2>svg{
+    left: -100%;
+}
+    & input:checked + label>.logo2>svg {
      rotate: y 90deg ;
      transition: all 1s;
     }
@@ -715,14 +773,20 @@ footer{
         transition: all 0.3s;
     }
    & input:not(:checked) + label>.logo1{
-        transition: all 1s;
+        transition: all 0.3s;
     }
    & input:checked +label>.logo1{
     width: 50px;
     rotate: 0deg;
     transition: all 1s;
-    
+    z-index: 10;
     }
+    & input[name="darkmood"]:checked > .moon{
+        z-index: 10;
+    }
+   & input:checked > .label .sun{
+    z-index: 1;
+   }
 }
 .side,header,.trendingnow{
     display: none;
@@ -749,6 +813,7 @@ footer{
 }
 .slidimg{
     margin: auto;
+    z-index: -1;
 }
 .explan{
    & .bigging{
@@ -766,8 +831,9 @@ footer{
 }
 section{
   padding: 2rem 0rem;
-  width: 95%;
+  width: 92%;
   margin:0 auto ;
+  
 }
 .news,.newvideo,.recomended{
     grid-template-columns: 100%;
@@ -794,6 +860,9 @@ section{
     }
 }
 .video{
+    & h1{
+     text-align: center;
+    }
    & .contantb{
         flex-direction: column;
     
