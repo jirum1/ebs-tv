@@ -600,6 +600,9 @@ footer{
   & .follow{
             flex-direction: row;
             padding: 0;
+           & .fa{
+                aspect-ratio: 1;
+            }
         }
        & .emile{
             position: relative;
@@ -748,8 +751,8 @@ footer{
         --background1:hsl(0,0%,96%);
         --background3:hsl(0,0%,96%);
         --bordercolor:hsl(0,0%,96%);
-        --coloreof30:hsl(0,0%,40%);
-        --coloreof301:hsl(0,0%,20%);
+        --coloreof30:hsl(0,0%,25%);
+        --coloreof301:hsl(0,0%,10%);
         --color10:hsl(0,0%,85%);
 
     }
@@ -874,11 +877,22 @@ section{
     
     }
 }
+footer{
+ & .links{
+   & a{
+        color: white;
+    }
+    &  input{
+    color: white;
+    }
+}
+}
 .copyright{
     padding: 0.2rem;
     align-items: end;
    & p,a{
         font-size: xx-small;
+        color: white;
     }
    
 }
