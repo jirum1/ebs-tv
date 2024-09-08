@@ -24,7 +24,7 @@
 body{
     background-color: var(--background);
     overflow-x: hidden;
-    max-width: 100vw;
+    max-width: 100svw;
 }
 p{
     font-size: 0.9rem;
@@ -752,8 +752,8 @@ footer{
         --background1:hsl(0,0%,96%);
         --background3:hsl(0,0%,96%);
         --bordercolor:hsl(0,0%,96%);
-        --coloreof30:hsl(0,0%,25%);
-        --coloreof301:hsl(0,0%,10%);
+        --coloreof30:hsl(0,0%,98%);
+        --coloreof301:hsl(0,0%,5%);
         --color10:hsl(0,0%,85%);
 
     }
@@ -893,7 +893,7 @@ footer{
     align-items: end;
    & p,a{
         font-size: xx-small;
-        color: white;
+        color: rgba(255, 255, 255, 0.411);
     }
    
 }
