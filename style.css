@@ -1,5 +1,6 @@
 *{
     margin: 0;padding: 0;
+    outline: 2px solid red;
 }
 :root{
     --color60:hsl(18,100%,36%);
@@ -97,6 +98,9 @@ a{
     }
 }
 .follow{
+    &::after{
+        display: none;
+    }
 position: relative;
 display: flex;
 flex-direction: column;
@@ -621,9 +625,9 @@ footer{
             }    
             & input{
                 padding: 1rem 3rem 1rem 1rem;
-                
                 text-transform: capitalize;
                 font-size: var(--smallfont);
+                border-radius: 5px;
             }
         }
 }
@@ -753,18 +757,12 @@ footer{
         --background1:hsl(0,0%,96%);
         --background3:hsl(0,0%,96%);
         --bordercolor:hsl(0,0%,96%);
-        --coloreof30:hsl(50,0%,80%);
+        --coloreof30:hsl(5,0%,70%);
         --coloreof301:hsl(0,0%,5%);
         --color10:hsl(0,0%,85%);
  
     }
-    body{
-        max-width: 100vw;
-        overflow-x: hidden;
-    }
-    main{
-        max-width: max-content;
-    }
+
 .hero{
     grid-template-columns: 100%;
     padding: 0 0.3rem;
