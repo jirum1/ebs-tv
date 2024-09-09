@@ -649,20 +649,12 @@ footer{
     padding: 0.3rem 1rem;
     padding-bottom: 0;
     height: max-content;
-   
     & .darkmood{
-        
-        position: relative;
         align-self: center;
-        & svg{
-            width:2rem;
-        }
-    & .sun{
-        position: absolute;
-        top: 0%;
-        z-index: -2;
-        width: 0;
-    }
+        width: 2rem;
+        height: 2rem;
+        background-image: url("sun-svgrepo-com.svg");
+        background-size: cover;
     }
    & img{
         margin: auto;
@@ -749,7 +741,7 @@ footer{
         --largerfont:1rem;
         --aa:0.82rem;
     }
-    :root:has([value="darkmood"]:checked) {
+    :root:has([value="dark"]:checked) {
         --background:var(--withe);
         --withe:var(--background);
         --black:var(--background);
@@ -791,12 +783,13 @@ footer{
     transition: all 1s;
     z-index: 10;
     }
-    & input[name="darkmood"]:checked > .moon{
-        z-index: 10;
-    }
-   & input:checked > .label .sun{
-    z-index: 1;
+   input[value="dark"]:checked + .darkmood{
+    background-image:url("moon-svgrepo-com.svg") ;
+    transition: all 500ms;
    }
+   input:not([value="dark"]:checked) + .darkmood{
+    transition: all 500ms;
+}
 }
 .side,header,.trendingnow{
     display: none;
