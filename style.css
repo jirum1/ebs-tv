@@ -648,6 +648,7 @@ footer{
     height: max-content;
    
     & .darkmood{
+        
         position: relative;
         align-self: center;
         & svg{
@@ -656,7 +657,7 @@ footer{
     & .sun{
         position: absolute;
         top: 0%;
-        z-index: -1;
+        z-index: -2;
         width: 0;
     }
     }
@@ -739,7 +740,7 @@ footer{
       }
     }
 }
-@media (max-width: 500px) {
+@media (max-width: 1024px) {
     :root{
         --h1font:3.4rem;
         --largerfont:1rem;
@@ -752,22 +753,30 @@ footer{
         --background1:hsl(0,0%,96%);
         --background3:hsl(0,0%,96%);
         --bordercolor:hsl(0,0%,96%);
-        --coloreof30:hsl(0,0%,98%);
+        --coloreof30:hsl(0,0%,100%);
         --coloreof301:hsl(0,0%,5%);
         --color10:hsl(0,0%,85%);
-
+ 
+    }
+    body{
+        max-width: 99.1vw;
+        overflow-x: hidden;
+    }
+    main{
+        max-width: max-content;
     }
 .hero{
     grid-template-columns: 100%;
     padding: 0 0.3rem;
-    width: 100%;
+    width: 97%;
     height: min-content;
+   
 }
 .header{
     display: flex;
     margin-bottom: 1.2rem;
   &  input:checked + label>.links{
-    left: -100%;
+    left: -90%;
 }
     & input:checked + label>.logo2>svg {
      rotate: y 90deg ;
@@ -799,6 +808,7 @@ footer{
 .main-contant{
     padding: 0;
     grid-template-rows: 9vh;
+    width: fit-content;
     &::after{
         display: none;
     }
@@ -806,8 +816,8 @@ footer{
 .mianM{
     flex-direction: column;
     gap: 1rem;
-    padding: 0 0.8rem;
-    margin-top: 1rem;
+    padding: 0 0.4rem;
+    margin: 1rem 0 0 0;
 }
 .explan,.slidimg{
     width: 100%;
@@ -837,12 +847,10 @@ section{
   padding: 2rem 0rem;
   width: 92%;
   margin:0 auto ;
-  
 }
 .news,.newvideo,.recomended{
     grid-template-columns: 100%;
 }
-
 .links{
     display: flex;
     flex-direction: column;
