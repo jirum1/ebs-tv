@@ -1,6 +1,5 @@
 *{
     margin: 0;padding: 0;
-    outline: 2px solid red;
 }
 :root{
     --color60:hsl(18,100%,36%);
@@ -98,15 +97,15 @@ a{
     }
 }
 .follow{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding-top: 2rem;
     &::after{
         display: none;
     }
-position: relative;
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 5px;
-padding-top: 2rem;
   & .line{
     width: 3px;
     height: 40%;
