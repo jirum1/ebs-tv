@@ -783,11 +783,11 @@ footer{
     transition: all 1s;
     z-index: 10;
     }
-   input[value="dark"]:checked + .darkmood{
+  & input[value="dark"]:checked + .darkmood{
     background-image:url("moon-svgrepo-com.svg") ;
     transition: all 500ms;
    }
-   input:not([value="dark"]:checked) + .darkmood{
+  & input:not([value="dark"]:checked) + .darkmood{
     transition: all 500ms;
 }
 }
