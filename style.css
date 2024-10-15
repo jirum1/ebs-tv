@@ -769,7 +769,7 @@ footer{
  
     }
     body:has([value="gg"]:checked){
-        height: 100vh;
+        height: 98vh;
         overflow: hidden;
     }
 
